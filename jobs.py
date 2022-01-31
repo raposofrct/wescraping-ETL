@@ -10,9 +10,12 @@ import sqlite3
 from sqlalchemy import create_engine
 import logging
 
-class ETL(object):
+class etl(object):
+    
+    def __init__(self):
+        self.variable = 0
 
-    def ProductIDs():
+    def ProductIDs(self):
         logging.info("Get Product ID's")
         # Conseguindo o HTML
         html = requests.get('https://www2.hm.com/en_us/men/products/jeans.html', headers={'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36'})
@@ -50,7 +53,7 @@ class ETL(object):
         
         return dados
 
-    def ProductFeatures(dados):
+    def ProductFeatures(self,dados):
         logging.info("Get Product Feature's")
         # Obtendo os Links
         links = []
@@ -125,7 +128,7 @@ class ETL(object):
         
         return dados
 
-    def DataCleaning(dados):
+    def DataCleaning(self,dados):
         logging.info('Cleaning the data')
         # Rename columns
         columns_name_list = []
@@ -466,7 +469,7 @@ class ETL(object):
     ######################################################################################################################################################################################################3
 
     
-    def DataBase(db,dados):
+    def DataBase(self,dados,db):
         logging.info('Send to DataBase')
         # Connecting with the Database
         conn = db.connect()
