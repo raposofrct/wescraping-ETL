@@ -10,6 +10,7 @@ import sqlite3
 from sqlalchemy import create_engine
 import logging
 import os
+from pathlib import Path
 
 # Jobs
 def ProductIDs():
@@ -494,7 +495,9 @@ if __name__=='__main__':
     dados = ProductFeatures(dados)
     dados = DataCleaning(dados)
     
-    database_file = '/Users/nando/Comunidade\ DS/ds_ao_dev/ETL/hm_db.sqlite'
+    root_directory = Path(__file__).parent
+    database_file = root_directory / "hm_db.sqlite" # using database absolute path
+    
     DataBase(dados, create_engine(f"sqlite:///{database_file}", echo=False))
     
     
