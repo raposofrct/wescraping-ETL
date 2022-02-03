@@ -493,7 +493,9 @@ if __name__=='__main__':
     dados = ProductIDs()
     dados = ProductFeatures(dados)
     dados = DataCleaning(dados)
-    DataBase(dados,create_engine('sqlite:///hm_db.sqlite',echo=False))
+    
+    database_file = '/Users/nando/Comunidade\ DS/ds_ao_dev/ETL/hm_db.sqlite'
+    DataBase(dados, create_engine(f"sqlite:///{database_file}", echo=False))
     
     
     
