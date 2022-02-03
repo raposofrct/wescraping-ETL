@@ -494,3 +494,12 @@ if __name__=='__main__':
     dados = ProductFeatures(dados)
     dados = DataCleaning(dados)
     DataBase(dados,create_engine('sqlite:///hm_db.sqlite',echo=False))
+    
+    
+    
+    
+    
+    
+    
+    
+    
