@@ -1,2 +1,0 @@
-# Coloquei para rodar às 6:00h e às 18:00h
-* 6,18 * * * /Users/user/.pyenv/versions/python_version/envs/pyenv_name/bin/python /Users/user/path/script.py
