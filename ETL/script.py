@@ -149,10 +149,16 @@ def DataCleaning(dados):
     dados['fit'] = dados['fit'].apply(lambda x: x.replace(' ','_').lower())
 
     # Size - Drop
-    dados.drop('size',1,inplace=True)
+    try:
+        dados.drop('size',1,inplace=True)
+    except:
+        pass
 
     # Product Safety - Drop
-    dados.drop('product safety',1,inplace=True)
+    try:
+        dados.drop('product safety',1,inplace=True)
+    except:
+        pass
 
     # Price - Pattern
     dados['price'] = dados['price'].apply(lambda x: float(x.split('$')[-1]))
@@ -162,7 +168,10 @@ def DataCleaning(dados):
     dados['id_group'] = dados['id_group'].apply(lambda x: '0'+str(x)) # add 0 no início, como no product id e transformar em str
 
     # More Sustainable Materials - Drop
-    dados.drop('more sustainable materials',axis=1,inplace=True)
+    try:
+        dados.drop('more sustainable materials',axis=1,inplace=True)
+    except:
+        pass
 
     logging.info('Starting Composition Cleaning')
     #######################################################################################################################################################################################################
