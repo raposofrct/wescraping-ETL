@@ -1,4 +1,7 @@
 # Schedule Crontab with this command to run the pipeline at 6:00 and 18:00 every day.
-0 18,6 * * *  /venv_path/python /script_path/script.py
+0 18 * * *  /venv_path/python /script_path/script.py
+
+# Schedule a github update (After some minutes my updated database and log file will be avaible on github)
+15 18 * * * cd /git_path/ && git add . && git commit -m 'updating database automatically' && git push origin master
 
 # To change the scheduled time, acess https://crontab.guru and make your own
