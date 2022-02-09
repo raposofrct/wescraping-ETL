@@ -3,9 +3,9 @@
 As empresas precisam constantemente acompanhar os seus concorrentes e todos os SKU's deles.
 
 A tarefa pode custar muito tempo e dinheiro para grandes empresas. 
-Então, com uso de Webscraping e ETL bem estruturado (DAG) e documentado, podemos coletar todos esse catálogo automaticamente e lançá-los em um banco de dados para podermos utilizar posteriormente em análise de dados e de Business Intelligence (BI).
+Então, com uso de Webscraping e ETL bem estruturado (DAG) e documentado, podemos coletar todo esse catálogo automaticamente e lançá-los em um banco de dados para podermos utilizar posteriormente em análise de dados e de Business Intelligence (BI), por exemplo.
 
-#### Além disso, esse repositório é atualizado automaticamente pelo Crontab que envia diariamente o database e os logs atualizados.
+#### Além disso, esse repositório é atualizado automaticamente pelo Crontab, que envia diariamente o database e os logs atualizados.
 
 ## Para resolver esse problema, utilizei: 
 * Biblioteca **BealtifulSoup**, que consegue fazer essa **webscraping em páginas HTML** para coleta de informações.
