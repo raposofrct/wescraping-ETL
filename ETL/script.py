@@ -503,10 +503,10 @@ if __name__=='__main__':
     dados = ProductIDs()
     dados = ProductFeatures(dados)
     dados = DataCleaning(dados)
-    
+
     root_directory = Path(__file__).parent
-    database_file = root_directory / "hm_db.sqlite" # using database absolute path
-    
+    database_file = root_directory / "hm_db.sqlite"
+
     DataBase(dados, create_engine(f"sqlite:///{database_file}", echo=False))
     
     
